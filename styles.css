@@ -1,0 +1,119 @@
+body {
+    font-family: "Creepster", system-ui;;
+    font-size: 35px;
+    text-shadow: 0 0 20px #142039;
+    background-image: url('Spooky_background.jpg'); /* Example for the background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ff9028;
+    text-align: center;
+    padding: 10px;
+    margin-bottom:0%;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0px;
+    margin-top: -2%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Align toolbars on the sides of the pumpkin */
+    align-items: center;
+    width: 100%; /* Ensure full width for even distribution */
+    max-width: 1100px; /* Optional: Constrain total width of the flex container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pumpkin-area {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #b0e1ff;
+    border-radius: 8px;
+    background-color: #ffa500;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: auto; /* Center pumpkin between toolbars */
+}
+
+.pumpkin {
+    width: 100%;
+    height: 100%;
+}
+
+.left-toolbar, .right-toolbar {
+    font-family: "Creepster", system-ui;;
+    font-size: 20px;
+    text-shadow: 0 0 0px #101c34;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.9;
+    gap: 20px; /* Space between rows */
+    width: 245px; /* Adjust width for side-by-side alignment */
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the grid layout */
+    grid-auto-rows: 1fr; /* Make all rows same height */
+    gap: 20px; /* Space between items in the grid */
+    width: 200px; /* Equal width and height for square shape */
+    height: 200px;
+    padding: 20px;
+    background-color: #b0e1ff;
+    border-radius: 8px;
+    /*border: 1px solid #4b4b4b;*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.row h2 {
+    grid-column: span 3; /* Take full width of the grid */
+    margin: 5px 0;
+    color: #ee3902;
+    text-align: center;
+}
+
+.draggable {
+    width: 55px;
+    height: 50px; /* Ensure size consistency for grid */
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.draggable:hover {
+    transform: scale(1.2);
+}
+
+.dropped {
+    cursor: move;
+    transition: transform 0.2s;
+}
+
+.scaled {
+    transform: scale(0.3); /* Scale down to 60% of original size */
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fcd44e;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ca5009;
+}
